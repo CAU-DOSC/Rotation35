@@ -133,7 +133,6 @@ char *juggling(char input[], int d)
 	}
 	return input;
 }
-
 char *bw(char input[], int d)
  {
 	char temp_a[10000];
@@ -162,9 +161,13 @@ char *bw(char input[], int d)
 				temp_br[i] = input[i];
 			}
 			strcat(temp_br, temp_bl);
-			strcat(temp_br, temp_a);
-			return temp_br;
+			strcat(temp_br, tmep_a);
+			for(i=0;i<length;i++)
+			{
+				input[i]=temp_br[i];
+			}
 		}
+		
 		else
 		{
 			for (i = length - d; i<length; i++)
@@ -181,7 +184,11 @@ char *bw(char input[], int d)
 			}
 			strcat(temp_b, temp_al);
 			strcat(temp_b, temp_ar);
-			return temp_b;
+			for(i=0;i<length;i++)
+			{
+				input[i]=temp_br[i];
+			}			
+			
 		}
 	}
 	else
@@ -202,9 +209,13 @@ char *bw(char input[], int d)
 				temp_ar[i] = input[i];
 			}
 			strcat(temp_b, temp_al);
-			strcat(temp_b, temp_ar);
-			return temp_b;
+			strcat(temp_b, temp_ar);	
+			for(i=0;i<length;i++)
+			{
+				input[i]=temp_br[i];
+			}
 		}
+		
 		else
 		{
 			for (i = 0; i<d; i++)
@@ -220,8 +231,13 @@ char *bw(char input[], int d)
 				temp_br[i] = input[i];
 			}
 			strcat(temp_br, temp_bl);
-			strcat(temp_br, temp_a);	
-			return temp_br;
+			strcat(temp_br, temp_a);
+			
+			for(i=0;i<length;i++)
+			{
+				input[i]=temp_br[i];
+			}
+			
 		}
 	}
 }
