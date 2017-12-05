@@ -101,12 +101,13 @@ char *Reversal_Algorithm(char input[], int d)
 	return input;
 }
 
-char *jugglng(char input[], int d)
+char *juggling(char input[], int d)
 {
 	int i, j, k, temp, n, ntemp, gcd;
 	n = starlen(input);
+	int arr[10000];
 	ntemp = n;
-	dteno = d;
+	int dtemp = d;
 	while (ntemp != 0)
 	{
 		int makegcd = dtemp % ntemp;
@@ -135,12 +136,12 @@ char *jugglng(char input[], int d)
 
 char *bw(char input[], int d)
  {
-	char temp_a[];
-	char temp_al[];
-	char temp_ar[];
-	char temp_b[];
-	char temp_bl[];
-	char temp_br[];
+	char temp_a[10000];
+	char temp_al[10000];
+	char temp_ar[10000];
+	char temp_b[10000];
+	char temp_bl[10000];
+	char temp_br[10000];
 	int i;
 	int length = strlen(input);
 	if (d>0)
@@ -161,7 +162,7 @@ char *bw(char input[], int d)
 				temp_br[i] = input[i];
 				}
 			strcat(temp_br, temp_bl);
-			strcat(temp_br, tmep_a);
+			strcat(temp_br, temp_a);
 			return temp_br;
 			}
 		
@@ -222,7 +223,7 @@ char *bw(char input[], int d)
 				temp_br[i] = input[i];
 				}
 			strcat(temp_br, temp_bl);
-			strcat(temp_br, tmep_a);
+			strcat(temp_br, temp_a);
 			
 				return temp_br;
 			}
