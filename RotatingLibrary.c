@@ -135,34 +135,37 @@ char *jugglng(char input[], int d)
 
 char *bw(char input[], int d)
  {
-	char temp_a[];
-	char temp_al[];
-	char temp_ar[];
-	char temp_b[];
-	char temp_bl[];
-	char temp_br[];
+	char temp_a[10000];
+	char temp_al[10000];
+	char temp_ar[10000];
+	char temp_b[10000];
+	char temp_bl[10000];
+	char temp_br[10000];
 	int i;
 	int length = strlen(input);
 	if (d>0)
 		 {
 		int rotatenum = d;
 		if (d < length / 2)
-			 {
-			for (i = 0; i<d; i++)
+			{
+				for (i = 0; i<d; i++)
 				 {
-				temp_a[i] = input[i];
+					temp_a[i] = input[i];
 				}
-			for (i = d; i<length - d; i++)
+				for (i = d; i<length - d; i++)
 				 {
-				temp_bl[i] = input[i];
+					temp_bl[i] = input[i];
 				}
-			for (i = length - d; i<length; i++)
+				for (i = length - d; i<length; i++)
 				 {
-				temp_br[i] = input[i];
+					temp_br[i] = input[i];
 				}
-			strcat(temp_br, temp_bl);
-			strcat(temp_br, tmep_a);
-			return temp_br;
+				strcat(temp_br, temp_bl);
+				strcat(temp_br, tmep_a);
+				for(i=0;i<length;i++)
+				{
+					input[i]=temp_br[i];
+				}
 			}
 		
 			else
@@ -181,7 +184,12 @@ char *bw(char input[], int d)
 				}
 			strcat(temp_b, temp_al);
 			strcat(temp_b, temp_ar);
-			return temp_b;
+			
+			for(i=0;i<length;i++)
+			{
+				input[i]=temp_br[i];
+			}
+			
 			}
 		}
 	
@@ -204,7 +212,11 @@ char *bw(char input[], int d)
 				}
 				strcat(temp_b, temp_al);
 				strcat(temp_b, temp_ar);
-				return temp_b;
+			
+			for(i=0;i<length;i++)
+			{
+				input[i]=temp_br[i];
+			}
 			}
 		
 			else
@@ -224,7 +236,11 @@ char *bw(char input[], int d)
 			strcat(temp_br, temp_bl);
 			strcat(temp_br, tmep_a);
 			
-				return temp_br;
+			for(i=0;i<length;i++)
+			{
+				input[i]=temp_br[i];
+			}
+			
 			}
 		}
 	}
