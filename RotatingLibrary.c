@@ -8,7 +8,7 @@ char *TrivialPricySolution(char input[], int d){
 		rotateNum = d;
 		temp = input[0];
 		for(int i = 0; i < rotateNum; i++){
-			for(int j = 0; j < length; j++)
+			for(int j = 0; j < length-1; j++)
 				input[j] = input[j+1];
 		}
 		input[length-1] = temp;
@@ -101,12 +101,13 @@ char *Reversal_Algorithm(char input[], int d)
 	return input;
 }
 
-char *jugglng(char input[], int d)
+char *juggling(char input[], int d)
 {
 	int i, j, k, temp, n, ntemp, gcd;
 	n = starlen(input);
+	int arr[10000];
 	ntemp = n;
-	dteno = d;
+	int dtemp = d;
 	while (ntemp != 0)
 	{
 		int makegcd = dtemp % ntemp;
@@ -234,7 +235,7 @@ char *bw(char input[], int d)
 				temp_br[i] = input[i];
 				}
 			strcat(temp_br, temp_bl);
-			strcat(temp_br, tmep_a);
+			strcat(temp_br, temp_a);
 			
 			for(i=0;i<length;i++)
 			{
