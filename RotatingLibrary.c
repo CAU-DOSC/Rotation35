@@ -145,87 +145,83 @@ char *bw(char input[], int d)
 	int i;
 	int length = strlen(input);
 	if (d>0)
-		 {
+	{
 		int rotatenum = d;
 		if (d < length / 2)
-			 {
+		{
 			for (i = 0; i<d; i++)
-				 {
+			{
 				temp_a[i] = input[i];
-				}
+			}
 			for (i = d; i<length - d; i++)
-				 {
+			{
 				temp_bl[i] = input[i];
-				}
+			}
 			for (i = length - d; i<length; i++)
-				 {
+			{
 				temp_br[i] = input[i];
-				}
+			}
 			strcat(temp_br, temp_bl);
 			strcat(temp_br, temp_a);
 			return temp_br;
-			}
-		
-			else
-			 {
+		}
+		else
+		{
 			for (i = length - d; i<length; i++)
-				 {
+			{
 				temp_b[i] = input[i];
-				}
+			}
 			for (i = 0; i<d; i++)
-				 {
+			{
 				temp_al[i] = input[i];
-				}
+			}
 			for (i = d; i<length - d; i++)
-				 {
+			{
 				temp_ar[i] = input[i];
-				}
+			}
 			strcat(temp_b, temp_al);
 			strcat(temp_b, temp_ar);
 			return temp_b;
-			}
-		}
-	
-		else
-		 {
-			d = d*(-1);
-			if (d<length / 2)
-			{	
-				for (i = length - d; i<length; i++)
-				{
-					temp_b[i] = input[i];
-				}
-				for (i = 0; i<d; i++)
-				{
-					temp_al[i] = input[i];
-				}
-				for (i = d; i<length - d; i++)
-				{
-					temp_ar[i] = input[i];
-				}
-				strcat(temp_b, temp_al);
-				strcat(temp_b, temp_ar);
-				return temp_b;
-			}
-		
-			else
-			{
-				for (i = 0; i<d; i++)
-				{
-					temp_a[i] = input[i];
-				}
-				for (i = d; i<length - d; i++)
-				{
-					temp_bl[i] = input[i];
-				}
-			for (i = length - d; i<length; i++)
-				{
-				temp_br[i] = input[i];
-				}
-			strcat(temp_br, temp_bl);
-			strcat(temp_br, temp_a);
-			
-				return temp_br;
-			}
 		}
 	}
+	else
+	{
+		d = d*(-1);
+		if (d<length / 2)
+		{	
+			for (i = length - d; i<length; i++)
+			{
+				temp_b[i] = input[i];
+			}
+			for (i = 0; i<d; i++)
+			{
+				temp_al[i] = input[i];
+			}
+			for (i = d; i<length - d; i++)
+			{
+				temp_ar[i] = input[i];
+			}
+			strcat(temp_b, temp_al);
+			strcat(temp_b, temp_ar);
+			return temp_b;
+		}
+		else
+		{
+			for (i = 0; i<d; i++)
+			{
+				temp_a[i] = input[i];
+			}
+			for (i = d; i<length - d; i++)
+			{
+				temp_bl[i] = input[i];
+			}
+			for (i = length - d; i<length; i++)
+			{
+				temp_br[i] = input[i];
+			}
+			strcat(temp_br, temp_bl);
+			strcat(temp_br, temp_a);	
+			return temp_br;
+		}
+	}
+}

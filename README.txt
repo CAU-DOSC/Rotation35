@@ -45,6 +45,12 @@ Reverse의 알고리즘으로 문자열을 Rotate시킨다.
 
 Header File
 
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#include <time.h>
+
 char *TrivialPricySolution(char input[], int d);
 
 char *juggling(char input[], int d);
