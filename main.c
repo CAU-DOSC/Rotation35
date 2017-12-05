@@ -39,13 +39,13 @@ int main(int argc, const char * argv[]){
 	TrivialPricySolution(str,d);
 	result_trivial = (double)clock() - current / CLOCKS_PER_SEC; //끝난 시간 - 현재시간
 
-	//current = clock(); //현재 시간
-	//juggling(str,d);
-	//result_juggle = (double)clock() - current / CLOCKS_PER_SEC; //끝난 시간 - 현재시간
+	current = clock(); //현재 시간
+	juggling(str,d);
+	result_juggle = (double)clock() - current / CLOCKS_PER_SEC; //끝난 시간 - 현재시간
 
-	//current = clock(); //현재 시간
-	//bw(str,d);
-	//result_bw = (double)clock() - current / CLOCKS_PER_SEC; //끝난 시간 - 현재시간
+	current = clock(); //현재 시간
+	bw(str,d);
+	result_bw = (double)clock() - current / CLOCKS_PER_SEC; //끝난 시간 - 현재시간
 
 	current = clock(); //현재 시간
 	Reversal_Algorithm(str,d);
