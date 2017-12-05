@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 
 char *TrivialPricySolution(char input[], int d);
 char *juggling(char input[], int d);
