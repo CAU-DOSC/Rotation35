@@ -8,7 +8,7 @@ char *TrivialPricySolution(char input[], int d){
 		rotateNum = d;
 		temp = input[0];
 		for(int i = 0; i < rotateNum; i++){
-			for(int j = 0; j < length; j++)
+			for(int j = 0; j < length-1; j++)
 				input[j] = input[j+1];
 		}
 		input[length-1] = temp;
